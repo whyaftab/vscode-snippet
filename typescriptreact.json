@@ -1,0 +1,89 @@
+{
+	"Screen Generator": {
+		"prefix": "screenSnip",
+		"body": [
+		  "// libraries",
+		  "import React from 'react';",
+		  "import styled from 'styled-components/native';",
+		  "",
+		  "// components",
+		  "import { Spacer } from '@components/atoms';",
+		  "",
+		  "// styles",
+		  "import { genericStyles } from '@styles/genericStyles';",
+		  "",
+		  "// misc",
+		  "import { NavigationRoutes, RootStackParamList } from '@navigation/types';",
+		  "import { StackScreenProps } from '@react-navigation/stack';",
+		  "",
+		  "// types",
+		  "type Props = StackScreenProps<RootStackParamList, NavigationRoutes.${1}>;",
+		  "",
+		  "export const ${TM_FILENAME_BASE} = (props: Props) => {",
+		  "  return (",
+		  "    <Container>",
+		  "      <Spacer.Column numberOfSpaces={1} />",
+		  "    </Container>",
+		  "  );",
+		  "};",
+		  "",
+		  "const Container = styled.View({});",
+		  ""
+		],
+		"description": "Screen Generator"
+	  },
+	"Component Generator": {
+		"prefix": "componentSnip",
+		"body": [
+			"// libraries",
+			"import React from 'react';",
+			"import styled from 'styled-components/native';",
+			"",
+			"// components",
+			"import { Spacer } from '@components/atoms';",
+			"",
+			"// styles",
+			"import { genericStyles } from '@styles/genericStyles';",
+			"",
+			"// misc",
+			"",
+			"type ${TM_FILENAME_BASE}Props =  {",
+			"${1}",
+			"}",
+			"",
+			"export const ${TM_FILENAME_BASE} = ({${2}}: ${TM_FILENAME_BASE}Props) => {",
+			"  return (",
+			"    <Container>",
+			"      <Spacer.Column numberOfSpaces={1} />",
+			"    </Container>",
+			"  );",
+			"};",
+			"",
+			"const Container = styled.View({});",
+			""
+		],
+		"description": "Component Generator"
+	},
+	"Styled Component Generator": {
+		"prefix": "styledSnip",
+		"body": [
+			"const ${1} = styled.View({${2}});"
+		],
+		"description": "Styled Component Generator"
+		},
+		"Styled Component With Color and layout Generator": {
+		"prefix": ["styledColorSnip","styledLayoutSnip"],
+		"body": [
+			"const ${1} = styled.View(({ theme: { layout, colors } }) => ({${2}}));",
+			""
+		],
+		"description": "Styled Component With Color and layout Generator"
+	},
+	"Arrow Function": {
+		"prefix": "funcArrow",
+		"body": [
+			"const ${1} = (${2}) => {${3}}"
+		],
+		"description": "Arrow Function"
+	}
+}
